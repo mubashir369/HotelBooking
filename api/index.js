@@ -6,6 +6,7 @@ import userRouter from './routes/users.js'
 import authRouter from './routes/auth.js'
 import hotelsRouter from './routes/hotels.js'
 import roomsRouter from './routes/rooms.js'
+import cors from 'cors'
 import cookieParser from 'cookie-parser'
 dotenv.config();
 
@@ -23,6 +24,7 @@ mongoose.connection.on("disconnected",()=>{
 //middlewares
 app.use(cookieParser())
 app.use(express.json())
+app.use(cors())
 
 app.use('/api/users',userRouter)
 app.use('/api/auth',authRouter)
