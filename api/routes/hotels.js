@@ -21,6 +21,7 @@ router.delete("/:id",verifyAdmin, deleteHotel);
 //get
 router.get("/find/:id", getHotel);
 //getAll
+router.get("/", getHotels)
 router.get("/countByCity",countByCity);
 router.get("/countByType",countByType);
 

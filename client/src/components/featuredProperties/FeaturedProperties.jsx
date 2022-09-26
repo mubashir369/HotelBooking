@@ -1,6 +1,9 @@
 import "./featuredProperties.css";
 
 const FeaturedProperties = () => {
+  const { data, loading, error } = useFetch(
+    "http://localhost:5000/api/hotels/countByType"
+  );
   return (
     <div className="fp">
       <div className="fpItem">
